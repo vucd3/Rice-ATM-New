@@ -247,6 +247,10 @@ class DetectFace(object):
         
         label = self.le.classes_[j]
 
+        if int(preds[j]) == 1:
+            label = "real"
+        else:
+            label = "false"
         return label      
     
     def is_check_time_of_getRice(self, name, time):
@@ -335,7 +339,7 @@ class DetectFace(object):
     def detect_face(self):
         gray = cv2.cvtColor(self.resize, cv2.COLOR_BGR2GRAY)
         self.faces = self.face_cascade.detectMultiScale(gray,scaleFactor = 1.1, 
-            minNeighbors=5, minSize=(100, 100), maxSize=(350, 350))
+            minNeighbors=5, minSize=(150, 150), maxSize=(350, 350))
         
         for (x, y, w, h) in self.faces:
             cv2.rectangle(self.resize, (x, y), (x+w, y+h), (0, 255, 0), 5)

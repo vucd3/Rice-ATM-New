@@ -88,7 +88,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "FACE DETECTION SYSTEM"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "ATM-GẠO"))
         self.add_face.setText(_translate("MainWindow", "THÊM KHUÔN MẶT\nVÀO HỆ THỐNG"))
         self.textBrowser.setText(_translate("MainWindow", self.title))
         self.detect_face.setText(_translate("MainWindow", "NHẬN DIỆN KHUÔN MẶT"))
